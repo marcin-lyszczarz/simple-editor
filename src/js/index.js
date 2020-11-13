@@ -6,4 +6,17 @@ import '../scss/main.scss';
 
 /* place your code below */
 
-console.log('HELLO 🚀')
+const text = document.querySelector('.textarea');
+const btnLoad = document.querySelector('.load--js');
+const btnSave = document.querySelector('.save--js');
+
+const entry = localStorage.getItem('entry');
+
+btnLoad.addEventListener('click', ()=>{
+    text.value = localStorage.getItem('entry');
+});
+
+btnSave.addEventListener('click', ()=>{
+    localStorage.setItem('entry', text.value);
+    text.value = '';
+});

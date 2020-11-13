@@ -2,12 +2,40 @@
 
 @import "_variables";
 @import "modules/hello.scss";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 
 body {
+  font-family: 'Open Sans', sans-serif;
   background: $wtf;
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+}
+.header{
+  font-size: 44px;
+  margin-bottom: 16px;
+}
+.textarea{
+  height: 440px;
+  width: 860px;
+}
+.action{
+  padding: 45px;
+  display: flex;
+  justify-content: flex-end;
+}
+.action__button{
+  width: 100px;
+  height: 50px;
+  border: none;
+}
+
+.action__button--load{
+  background: rgb(204, 78, 78);
+  margin-right: 25px;
+}
+.action__button--save{
+  background: rgb(50, 252, 117);
 }
